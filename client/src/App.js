@@ -22,7 +22,8 @@ class App extends Component
   handle(e)
   {
     e.preventDefault();
-    $.post("http://localhost:5000/add", {
+    $.post("http://localhost:5000/add",//using a ajax call
+     {
       name : this.state.name,
       description : this.state.description,
       price : this.state.price,
@@ -34,7 +35,6 @@ class App extends Component
 
     
   }
-  
   modify(event){
     this.setState({
       name : document.getElementById('name').value,
